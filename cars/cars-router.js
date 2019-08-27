@@ -1,5 +1,6 @@
 const express = require('express');
 
+const db = require('../data/dbConfig.js');
 
 const router = express.Router();
 
@@ -27,7 +28,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   const carData = req.body;
-  db('cars').insert(fruitData)
+  db('cars').insert(carData)
   .then(ids => {
     db('cars').where({ id: ids[0] })
     .then(newCarEntry => {
