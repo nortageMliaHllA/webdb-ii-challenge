@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     res.json(cars); 
   })
   .catch (err => {
-    res.status(500).json({ message: 'Failed to retrieve fruits' });
+    res.status(500).json({ message: 'Failed to retrieve cars' });
   });
 });
 
@@ -22,7 +22,7 @@ router.get('/:id', (req, res) => {
     res.json(cars);
   }) 
   .catch (err => {
-    res.status(500).json({ message: 'Failed to retrieve fruit' });
+    res.status(500).json({ message: 'Failed to retrieve car' });
   });
 });
 
